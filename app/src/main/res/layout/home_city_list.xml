@@ -52,7 +52,7 @@
 	        android:layout_marginRight="@dimen/little_space">
 	    </ListView>
 
-	    <com.maiziedu.view.SiderBar
+	    <com.demo.charile.dianping.view.SiderBar
 	        android:id="@+id/city_side_bar"
 	        android:layout_width="@dimen/normal_input_height"
 	        android:layout_height="match_parent"
