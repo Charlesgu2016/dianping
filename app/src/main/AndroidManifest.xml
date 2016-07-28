@@ -8,18 +8,37 @@
     <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
     <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--地图包、搜索包需要的基础权限-->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--定位包、导航包需要的额外权限（注：基础权限也需要）-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--debug mode<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        android:theme="@android:style/Theme.Light.NoTitleBar">
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="2078b370c4dbf39af98c329bde978d9e"></meta-data>
+
         <activity
             android:name="com.demo.charile.dianping.dianping_client.WelcomeStartAct"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,10 +58,10 @@
 
         <!-- 全屏 -->
         <!--<activity-->
-            <!--android:name="com.zxing.activity.CaptureActivity"-->
-            <!--android:configChanges="orientation|keyboardHidden"-->
-            <!--android:screenOrientation="portrait"-->
-            <!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>-->
+        <!--android:name="com.zxing.activity.CaptureActivity"-->
+        <!--android:configChanges="orientation|keyboardHidden"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>-->
 
     </application>
 

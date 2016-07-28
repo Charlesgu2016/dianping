@@ -4,6 +4,12 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
+    sourceSets{
+        main{
+            jniLibs.srcDirs=['libs']
+        }
+    }
+
     defaultConfig {
         applicationId "com.demo.charile.dianping"
         minSdkVersion 16
@@ -28,4 +34,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile project(':library')
+
 }
