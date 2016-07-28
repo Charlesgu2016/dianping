@@ -1,20 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.demo.charile.dianping">
+    package="com.maiziedu.dianping_client"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <!-- 二维码扫描的权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity
+            android:name="com.demo.charile.dianping.dianping_client.WelcomeStartAct"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.demo.charile.dianping.dianping_client.CityActivity"></activity>
+        <activity android:name="com.demo.charile.dianping.dianping_client.AllCategoryActivity"></activity>
+        <activity android:name="com.demo.charile.dianping.dianping_client.MainActivity"></activity>
+        <activity android:name="com.demo.charile.dianping.dianping_client.GoodsDetailActivity"></activity>
+        <activity android:name="com.demo.charile.dianping.dianping_client.WelcomeGuideAct">
+
+        </activity>
+        <activity android:name="com.demo.charile.dianping.dianping_client.NearbyMapActivity">
+
+        </activity>
+
+        <!-- 全屏 -->
+        <!--<activity-->
+            <!--android:name="com.zxing.activity.CaptureActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>-->
+
     </application>
 
 </manifest>
