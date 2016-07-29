@@ -24,7 +24,7 @@ public class MyUtils {
 			R.drawable.ic_edu,R.drawable.ic_luck,R.drawable.ic_shopping};
 	public static long allCategoryNumber[] = new long[allCategray.length+5];//定义的大些
 
-	private static String RADOMS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789";
+	private static String RADOMS = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz123456789";
 
 	public static String getRandom(int num){
 		StringBuffer stb = new StringBuffer();

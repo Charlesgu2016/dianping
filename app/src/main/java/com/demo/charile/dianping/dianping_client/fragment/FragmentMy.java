@@ -32,7 +32,6 @@ public class FragmentMy extends Fragment {
 	@ViewInject(R.id.my_index_login_text)
 	private TextView login_text;
 
-
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
