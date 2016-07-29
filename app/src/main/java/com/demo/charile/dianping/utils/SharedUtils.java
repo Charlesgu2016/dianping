@@ -7,6 +7,7 @@ public class SharedUtils {
 	
 	private static final String FIIL_NAME = "byhands";
 	private static final String NODE_NAME = "welcome";
+	private static final String USER_NAME = "username";
 
 	// 获取boolean类型的值
 	public static boolean getWelcomeBoolean(Context context){
@@ -34,6 +35,20 @@ public class SharedUtils {
 	public static String getCityName(Context context){
 		
 		return context.getSharedPreferences(FIIL_NAME ,Context.MODE_PRIVATE).getString("cityName", "选择城市");
+	}
+
+	// 写入一个登录用户名
+	public static void putUserName(Context context ,String cityName){
+
+		Editor editor = context.getSharedPreferences(USER_NAME, Context.MODE_APPEND).edit();
+		editor.putString("userName", cityName);
+		editor.commit();
+	}
+
+	// 获取登录用户名
+	public static String getUserName(Context context){
+
+		return context.getSharedPreferences(USER_NAME ,Context.MODE_PRIVATE).getString("userName", "用户登录");
 	}
 
 

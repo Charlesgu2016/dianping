@@ -52,9 +52,9 @@
         <activity android:name="com.demo.charile.dianping.dianping_client.WelcomeGuideAct">
 
         </activity>
-        <activity android:name="com.demo.charile.dianping.dianping_client.NearbyMapActivity">
+        <activity android:name="com.demo.charile.dianping.dianping_client.NearbyMapActivity"/>
+        <activity android:name=".dianping_client.MyLoginActivity"/>
 
-        </activity>
 
         <!-- 全屏 -->
         <!--<activity-->

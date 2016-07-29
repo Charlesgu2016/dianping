@@ -5,6 +5,7 @@ import com.demo.charile.dianping.R;
 public class MyUtils {
 
 	//返回值
+	public static final int RequestLoginCode = 1;
 	public static final int RequestCityCode = 2;
 	public static final int RequestCaptureCode = 3;
 	public static String[] navsSort= {"美食","电影","酒店","KTV","自助餐","休闲娱乐",
@@ -22,4 +23,16 @@ public class MyUtils {
 			R.drawable.ic_photo,R.drawable.ic_hotel,R.drawable.ic_travel,R.drawable.ic_beauty,
 			R.drawable.ic_edu,R.drawable.ic_luck,R.drawable.ic_shopping};
 	public static long allCategoryNumber[] = new long[allCategray.length+5];//定义的大些
+
+	private static String RADOMS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789";
+
+	public static String getRandom(int num){
+		StringBuffer stb = new StringBuffer();
+			for(int i = 0;i<num;i++){
+
+				int random =(int)(Math.random()*RADOMS.length());
+				stb.append(RADOMS.charAt(random));
+			}
+		return stb.toString();
+	}
 }
